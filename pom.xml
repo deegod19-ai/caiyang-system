@@ -19,6 +19,7 @@
 
     <build>
         <plugins>
+            <!-- 舊的、只會標註正門的插件 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -30,6 +31,20 @@
                         </manifest>
                     </archive>
                 </configuration>
+            </plugin>
+            <!-- 【最終聖令】命令熔爐將所有法器打包進靈魂的終極鍛造模塊！ -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.4</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
