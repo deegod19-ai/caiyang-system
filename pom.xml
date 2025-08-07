@@ -17,7 +17,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <!-- The critical 'Main Gate Blueprint' is included here -->
     <build>
         <plugins>
             <plugin>
@@ -36,7 +35,12 @@
     </build>
 
     <dependencies>
-        <!-- We will add Imperial dependencies here later -->
+        <!-- 帝國授予的「神殿通行證」(PostgreSQL Driver) -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.3</version>
+        </dependency>
     </dependencies>
 
 </project>
