@@ -3,12 +3,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- 引入帝國的「工業母機」- Spring Boot -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.18</version> 
-        <relativePath/> <!-- lookup parent from repository -->
+        <version>2.7.18</version>
+        <relativePath/>
     </parent>
 
     <groupId>com.caiyang.empire</groupId>
@@ -23,6 +22,12 @@
     </properties>
 
     <dependencies>
+        <!-- 【新增】帝國的「星際港口」，賦予應用網絡通訊能力！ -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
         <!-- 工業母機提供的「標準化神殿連接套件」 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -46,7 +51,6 @@
 
     <build>
         <plugins>
-            <!-- 命令工業母機，進行標準化的、高效的鍛造 -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
